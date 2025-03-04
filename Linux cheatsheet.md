@@ -1,8 +1,7 @@
 # `Linux My definitive guide to the soul of Linux commands by [Felipe Sardi](mailto:felipe.sardi@gmail.com)
 
 # Alias Felipe Sardi (2024-10-15)
-
-## *.bash\_aliases*
+```
 cat > ~/.bash_aliases << EOF  
 alias ..='cd ..'  
 alias ...='cd ../..'  
@@ -52,6 +51,7 @@ alias t='traceroute'
 alias wifi=wavemon
 EOF
 source ~/.bashrc
+```
 
 ## *Bashrc para Alias*
 
