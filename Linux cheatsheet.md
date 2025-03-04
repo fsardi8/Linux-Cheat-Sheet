@@ -1,65 +1,61 @@
-# `Linux`
+# `Linux My definitive guide to the soul of Linux commands by [Felipe Sardi](mailto:felipe.sardi@gmail.com)
 
-## My definitive guide to the soul of Linux commands by [Felipe Sardi](mailto:felipe.sardi@gmail.com)
-
-# Alias
+# Alias Felipe Sardi (2024-10-15)
 
 ## *.bash\_aliases*
-
-`cat > ~/.bash_aliases << EOF`  
-`# Felipe Sardi (2024-10-15)`  
-`alias ..='cd ..'`  
-`alias ...='cd ../..'`  
-`alias etc='cd /etc'`  
-`alias hm='cd ~'`  
-`alias mnt='cd /mnt'`  
-`alias monet='cd /mnt/monet'`  
-`alias media='cd /mnt/monet/media'`  
-`alias mount='mount |column -t'`  
-`alias ai='sudo apt -y install'`  
-`alias ar='sudo apt purge'`  
-`alias au='sudo apt-get update && sudo apt-get -y upgrade && sudo apt autoremove'`  
-`alias adu='sudo apt dist-upgrade'`  
-`alias bc='bc -l'`  
-`alias blkid='blkid -o list'`  
-`alias btl='sudo btrfs subvolume list .'`  
-`alias chk='sudo e2fsck -p -f -C 0 /dev/'`  
-`alias bchk='sudo btrfs check --repair /dev/'`  
-`alias df='df -H'`  
-`alias du='du -ch'`  
-`alias e='emacs'`  
-`alias se='sudo -E emacs'`  
-`alias ealias='emacs ~/.bash_aliases && source ~/.bashrc'`  
-`alias efstab='sudo -E emacs /etc/fstab'`  
-`alias edeluge='sudo -E emacs /var/lib/deluged/config/core.conf'`  
-`alias esamba='sudo -E emacs /etc/samba/smb.conf && sudo systemctl restart smbd nmbd'`  
-`alias essh='sudo -E emacs /etc/ssh/sshd_config && sudo systemctl restart ssh'`  
-`alias fgrep='fgrep --color=auto'`  
-`alias egrep='egrep --color=auto'`  
-`alias grep='grep --color=auto'`  
-`alias agroup='sudo usermod -aG '`  
-`alias h='history'`  
-`alias hdspeed='dd if=/dev/zero of=hdspeedfile bs=1M count=1024 conv=fdatasync && sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches" && dd if=hdspeedfile of=/dev/null bs=1M count=1024'`  
-`alias ipscan=arp-scanner`  
-`alias ipfull='nmcli device show'`  
-`alias j='jobs -l'`  
-`alias l='ls -CF'`  
-`alias l.='ls -d .* --color=auto'`  
-`alias la='ls -A'`  
-`alias ll='ls -alF'`  
-`alias ls='ls --color=auto'`  
-`alias network='sudo nmtui'`  
-`alias fping='ping -c 100 -i .2'`  
-`alias reboot='sudo /sbin/reboot'`  
-`alias temp='vcgencmd measure_temp'`  
-`alias t='traceroute'`  
-`alias wifi=wavemon`  
-`EOF`  
-`source ~/.bashrc`
+cat > ~/.bash_aliases << EOF  
+alias ..='cd ..'  
+alias ...='cd ../..'  
+alias etc='cd /etc'  
+alias hm='cd ~'  
+alias mnt='cd /mnt'
+alias monet='cd /mnt/monet'  
+alias media='cd /mnt/monet/media'
+alias mount='mount |column -t'  
+alias ai='sudo apt -y install'
+alias ar='sudo apt purge'
+alias au='sudo apt-get update && sudo apt-get -y upgrade && sudo apt autoremove'
+alias adu='sudo apt dist-upgrade'  
+alias bc='bc -l'  
+alias blkid='blkid -o list'  
+alias btl='sudo btrfs subvolume list .'  
+alias chk='sudo e2fsck -p -f -C 0 /dev/'  
+alias bchk='sudo btrfs check --repair /dev/'  
+alias df='df -H'  
+alias du='du -ch'  
+alias e='emacs'  
+alias se='sudo -E emacs'  
+alias ealias='emacs ~/.bash_aliases && source ~/.bashrc'
+alias efstab='sudo -E emacs /etc/fstab'  
+alias edeluge='sudo -E emacs /var/lib/deluged/config/core.conf'
+alias esamba='sudo -E emacs /etc/samba/smb.conf && sudo systemctl restart smbd nmbd'
+alias essh='sudo -E emacs /etc/ssh/sshd_config && sudo systemctl restart ssh'
+alias fgrep='fgrep --color=auto'  
+alias egrep='egrep --color=auto'  
+alias grep='grep --color=auto'  
+alias agroup='sudo usermod -aG '  
+alias h='history'  
+alias hdspeed='dd if=/dev/zero of=hdspeedfile bs=1M count=1024 conv=fdatasync && sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches" && dd if=hdspeedfile of=/dev/null bs=1M count=1024'
+alias ipscan=arp-scanner  
+alias ipfull='nmcli device show'
+alias j='jobs -l'  
+alias l='ls -CF'  
+alias l.='ls -d .* --color=auto'  
+alias la='ls -A'  
+alias ll='ls -alF'  
+alias ls='ls --color=auto'  
+alias network='sudo nmtui'  
+alias fping='ping -c 100 -i .2'  
+alias reboot='sudo /sbin/reboot' 
+alias temp='vcgencmd measure_temp'
+alias t='traceroute'
+alias wifi=wavemon
+EOF
+source ~/.bashrc
 
 ## *Bashrc para Alias*
 
-`nano ~/.bashrc`  
+nano ~/.bashrc
 `if [ -e $HOME/.bash_aliases ]; then`  
     `source $HOME/.bash_aliases`  
 `fi`
